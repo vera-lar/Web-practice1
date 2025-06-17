@@ -15,6 +15,21 @@
       margin: 40px auto;
       border: 4px solid #4a90e2;
     }
+      body {
+            transition: background-color 0.5s ease;
+            text-align: center;
+            padding-top: 100px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            background-color: #444;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+   
   </style>
 </head>
 <body>
@@ -26,7 +41,7 @@
       <p>I dream of working at Google, Meta, Microsoft, and more!</p>
     </div>
   </header>
-
+   <button onclick="changeBackgroundColor()">Change Background Color</button>
   <main>
     <section>
       <h2>My Interests</h2>
@@ -40,6 +55,17 @@
     <section>
       <h2>Skills</h2>
       <p>Python, HTML, CSS, JavaScript</p>
+     
+    <script>
+        function changeBackgroundColor() {
+            // Generate a random color
+            const randomColor = '#' + Math.floor(Math.random()*16777215).toString(16);
+            document.body.style.backgroundColor = randomColor;
+        }
+    </script>
+
+
+
     </section>
   </main>
 
